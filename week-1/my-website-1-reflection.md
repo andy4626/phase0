@@ -3,7 +3,7 @@ andy4626.github.io
 
 Explain how to create a repository on GitHub and clone the repository to your local computer to a non-technical person.
 You can create a repository by clicking a plus sign on the top right corner of the very front page of GitHub and create its name, and click the MIT license.  You can clone the repo by copying the HTTPS link on the right side and typing "git clone (copied HTTPS)".  
-
+ 
 Describe what open source means.
 Open source allows developers or anyone in general to gain the access or free license to the codes posted on open source websites.
 
