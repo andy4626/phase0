@@ -1,3 +1,4 @@
+![Wireframe](./wireframe-index.png)
 What is a wireframe?
 
 Wireframe is important step in creating a website to sketch a rough draft version of your web design.  It will let you define hierarchy and plan the layouts for the users to see and interfact with.
