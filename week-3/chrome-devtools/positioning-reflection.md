@@ -1,12 +1,12 @@
-!<exercise1>(./imgs/exercise1.png)
-!<exercise2>(./imgs/exercise2.png)
-!<exercise3>(./imgs/exercise3.png)
-!<exercise4>(./imgs/exercise4.png)
-!<exercise5>(./imgs/exercise5.png)
-!<exercise6>(./imgs/exercise6.png)
-!<exercise7>(./imgs/exercise7.png)
-!<exercise8>(./imgs/exercise8.png)
-!<exercise9>(./imgs/exercise9.png)
+![exercise1](./imgs/exercise1.png)
+![exercise2](./imgs/exercise2.png)
+![exercise3](./imgs/exercise3.png)
+![exercise4](./imgs/exercise4.png)
+![exercise5](./imgs/exercise5.png)
+![exercise6](./imgs/exercise6.png)
+![exercise7](./imgs/exercise7.png)
+![exercise8](./imgs/exercise8.png)
+![exercise9](./imgs/exercise9.png)
 
 How can you use Chrome's DevTools inspector to help you format or position elements?
 I can use Devtools inspector to preview any changes that are made with positions and colors of interest.  I can basically preview any changes that I want to make and see how they look before actually incorporating them into the CSS file itself.
