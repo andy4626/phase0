@@ -45,7 +45,7 @@ What is the difference between float and integer division? How would you explain
 Integer is basically a whole number without any decimal points or fractions.  Float has a decimal point or a fraction.  So floats can be used to calculate numbers with great precision and accuracy where integer can used to estimate a large numbers or such.
 
 
-
+```ruby
 def hours_in_a_year
 puts 52*7*24
 end
@@ -53,3 +53,4 @@ end
 def minutes_in_a_decade
 puts 10*52*7*24*60
 end
+```
