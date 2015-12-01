@@ -1,14 +1,34 @@
+4.2.1: https://github.com/andy4626/phase0/blob/master/week-4/defining-variables.rb
+
+4.2.2: https://github.com/andy4626/phase0/blob/master/week-4/simple-string.rb
+
+4.2.3: https://github.com/andy4626/phase0/blob/master/week-4/simple-string.rb
+
+
 How does Ruby handle addition, subtraction, multiplication, and division of numbers?
+
+Ruby treats them like a calculator.  The numbers are going to be calculated correctly if put in with proper forms.
 
 What is the difference between integers and floats?
 
-What is the difference between integer and float division?
+Integer is a whole number without any decimals or fractions and float is a decimal/fraction number.
+
+What is the difference between integer and float 
+division?
+Floats has the extra numbers after the decimal(the fractions of one)
+
 
 What are strings? Why and when would you use them?
 
+Strings are just the letters.  It will be the alphabetical inputs. The actualy typed letters, words, or sentences.
+
 What are local variables? Why and when would you use them?
 
+Local variables are the variables that are declared within the coding sequence.  It can be given a number, floats, strings, or booleans. And they can be used to calculate or input the information to the program for them to calculate or whatnot.
+
 How was this challenge? Did you get a good review of some of the basics?
+
+Yes, it was fun going over the old materials that I was starting to forget slowly
 
 
 
