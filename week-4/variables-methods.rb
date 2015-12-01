@@ -17,3 +17,22 @@ num=gets.chomp.to_s
 big_num= num.to_i + 1
 puts "#{big_num.to_s} is bigger and better than your #{num}"
 end
+
+=begin
+How do you define a local variable?
+I can define a local variable by just stating a local variable or name in lower case and no spaces.  Underscore can be used for spaces if needed.
+	And have it set equal to(=) whatever integers, values, or string preferred
+
+How do you define a method?
+I can define a method by writine def to declare it as a method and type in method name. All lower case and underscore is preferred and start defining a method.
+
+What is the difference between a local variable and a method?
+variable has a set value.  It's like a data where as method is like a math equation where if sometime input is given, and output will be provided.
+
+How do you run a ruby program from the command line?
+i will write : ruby (filename.rb)
+
+How do you run an RSpec file from the command line?
+i will write rspec (filename_spec.rb)
+=end
+#What was confusing about this material? What made sense?
