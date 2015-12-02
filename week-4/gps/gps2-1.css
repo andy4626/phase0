@@ -1,0 +1,46 @@
+body {
+  font-family: Futura;
+  background-color: gray;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: 125%;
+}
+
+
+header{
+  background-color: red;
+  border: 20px inset black;
+  padding: 10px;
+}
+
+
+.column-1{
+  background-color: blue;
+  float:left;
+  width: 45%;
+  margin: 5px;
+  padding: 10px;
+}
+
+
+
+.column-2{
+  background-color: green;
+  float:right;
+  width: 45%;
+  margin: 5px;
+  padding: 10px;
+}
+
+
+
+footer{
+  background-color: yellow;
+  clear:both;
+}
