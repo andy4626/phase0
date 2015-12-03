@@ -13,8 +13,6 @@
 #Your Solution Below
 def shortest_string(list_of_words)
   # Your code goes here!
-puts list_of_words.min { |x,y| x.length <=> y.length }
+return list_of_words.min { |x,y| x.length <=> y.length }
 end
 
-my_array=["abcd", "adfdfdf","p", "hi", "bye", "hello"]
-shortest_string(my_array)
