@@ -22,8 +22,5 @@ def largest_integer(list_of_nums)
        end
     i+=1
 end
-   puts large
+   return large
 end
-
-my_array=[10, 25, 5, 7]
-largest_integer(my_array)
