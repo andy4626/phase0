@@ -22,8 +22,5 @@ def smallest_integer(list_of_nums)
     end
     i+=1
 end
-    puts small
+    return small
 end
-
-my_array=[10, 25, 5, 7]
-smallest_integer(my_array)
