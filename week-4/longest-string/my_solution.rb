@@ -14,7 +14,7 @@
 # Your Solution Below
 def longest_string(list_of_words)
   # Your code goes here!
-puts list_of_words.min { |x,y| y.length <=> x.length }
+return list_of_words.min { |x,y| y.length <=> x.length }
 end
 
 my_array=["abcd", "adfdfdf","p", "hi", "bye", "hello"]
