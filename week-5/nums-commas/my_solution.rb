@@ -17,7 +17,7 @@
 # 1. Initial Solution
 def separate_comma(number)
     reversed_number = number.to_s.reverse
-    comma = reversed_number.scan(/.{3}|.+/).join(",").reverse
+    comma = reversed_number.scan(/\d{1,3}/).join(",").reverse
     return comma
  end
 
@@ -25,7 +25,7 @@ def separate_comma(number)
 
 # 2. Refactored Solution
 def separate_coma(number)
-	return number.to_s.reverse.scan(/.{3}|.+/).join(",").reverse
+	return number.to_s.reverse.scan(/\d{1,3}/).join(",").reverse
 end
 
 
