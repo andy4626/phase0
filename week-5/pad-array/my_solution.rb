@@ -44,12 +44,18 @@ end
 
 
 def pad(array, min_size, value = nil) #non-destructive
-  if array.length >= min_size
-    return array
+  copy_array = []
+  count = 0
+  array.each do |fred|
+    copy_array[count] = fred
+    count += 1
+  end
+  if array.size >= min_size
+    return copy_array
   end
   x = 0
   new_array= Array.new(min_size)
-  while x < array.length
+  while x < array.size
     new_array[x] = array[x]
      x += 1
   end
@@ -57,18 +63,17 @@ def pad(array, min_size, value = nil) #non-destructive
   new_array[x] = value 
     x += 1
   end
-  p new_array
+  return new_array
 end
 
 
 # 3. Refactored Solution
-# def pad!(array, min_size, value = nil) #destructive
-#   return array if array.size >= min_size
-#   new_array = Array.new(min_size - array.size, value)
-#   array.concat(new_array)
-#   p array
-# end
-
+def pad!(array, min_size, value = nil) #destructive
+  return array if array.size >= min_size
+  new_array = Array.new(min_size - array.size, value)
+  array.concat(new_array)
+  p array
+end
 
 # pad!([1,2,3], 2, "apple")
 
