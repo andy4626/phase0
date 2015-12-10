@@ -2,7 +2,7 @@
 
 # I worked on this challenge [by myself, with: Eddie]
 
-# I spent [] hours on this challenge.
+# I spent [4] hours on this challenge.
 
 # Complete each step below according to the challenge directions and
 # include it in this file. Also make sure everything that isn't code
@@ -19,7 +19,6 @@
 # Create a hash within method
 # Puts elements in hash paired with frequency
 # Sort the hashes by frequency stored in value
-# Reverse the order of hashes, so most frequent is first
 # compare values of hashes,
 # identifies the highest values
 # returns the key(s) with the highest value
@@ -27,14 +26,12 @@
 # 1. Initial Solution
 
 def mode(array)
+  most=[]
   frequencies = Hash.new(0)
   array.each { |word| frequencies[word] += 1 }
-  frequencies = frequencies.sort_by { |a, b| b }
-  frequencies.reverse!
-  element = frequencies.max_by{ |k,v| v }[0] 
-  p element
+  frequencies.each { |k,v| most.push(k) if v == frequencies.values.max }
+  return most
 end
-
 
 # 3. Refactored Solution
 
