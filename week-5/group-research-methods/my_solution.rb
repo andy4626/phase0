@@ -54,9 +54,6 @@ def my_array_deletion_method(array, letter)
   array.delete_if {|x| x.to_s.include?(letter) }  
 end
 
-def my_array_deletion_method(array, letter)
-  array.delete_if {|x| x.to_s==letter) }  
-end
 # Identify and describe the Ruby method(s) you implemented.
 #I used a delete if method which deletes the selected item when the asking requirement is fulfilled.
 #I also used to_s to change array element into a string and compare if the letter is there for me to delete
