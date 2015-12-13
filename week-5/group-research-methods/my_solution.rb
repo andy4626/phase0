@@ -51,7 +51,7 @@ end
 
 # Person 4
 def my_array_deletion_method(array, letter)
-  array.delete_if {|x| x.to_s.include?(letter) }  
+  array.delete_if {|x| x.to_s.include?(letter)}  
 end
 
 # Identify and describe the Ruby method(s) you implemented.
