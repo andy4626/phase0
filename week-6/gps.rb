@@ -31,3 +31,17 @@ def serving_size_calc(item_to_make, num_of_servings)
     #tells how many items can be made and suggesting other options for the remaining ingredients
   end
 end
+
+# Reflection
+# What did you learn about making code readable by working on this challenge?
+# I learned that naming the variable has to be more clear, or else it will be hard to follow through
+
+# Did you learn any new methods? What did you learn about them?
+# I learned new approach for the raise argument part but other than that, it was straightforward
+
+# What did you learn about accessing data in hashes? 
+# I can access each by keys or values which saved me a lot of time with has_key? or has_value? methods.
+
+# What concepts were solidified when working through this challenge?
+# I solidified my knowledge of hash more than before especially accessing them.  I also learned that
+# naming variables are important.  I used to use just x for a variable sometimes which is a horrible practice
