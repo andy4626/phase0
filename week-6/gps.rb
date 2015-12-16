@@ -1,42 +1,33 @@
 # Your Names
-# 1)
-# 2)
+# 1) Kevin Huang
+# 2)Andrew Kim
 
-# We spent [#] hours on this challenge.
+# We spent [2] hours on this challenge.
 
 # Bakery Serving Size portion calculator.
 
-def serving_size_calc(item_to_make, num_of_ingredients)
+def serving_size_calc(item_to_make, num_of_servings)
   library = {"cookie" => 1, "cake" =>  5, "pie" => 7}
-  error_counter = 3
-
-  library.each do |food|
-    if library[food] != library[item_to_make]
-      error_counter += -1
-    end
-  end
-
-  if error_counter > 0
+  unless library.has_key?(item_to_make)
     raise ArgumentError.new("#{item_to_make} is not a valid input")
   end
+  #line 11-21: figure out if the item_to_make input exists in the library
 
-  serving_size = library.values_at(item_to_make)[0]
-  remaining_ingredients = num_of_ingredients % serving_size
-
-  case remaining_ingredients
-  when 0
-    return "Calculations complete: Make #{num_of_ingredients / serving_size} of #{item_to_make}"
+  #amount of ingredients required to make the item
+  remaining_servings = num_of_servings % library[item_to_make]
+  #tells the number of remaining ingredients  
+  if remaining_servings == 0
+    return "Calculations complete: Make #{num_of_servings / library[item_to_make]} of #{item_to_make}"
+    #tells how many items can be made with no remaining ingredients
   else
-    return "Calculations complete: Make #{num_of_ingredients / serving_size} of #{item_to_make}, you have #{remaining_ingredients} leftover ingredients. Suggested baking items: TODO: MAKE THIS FEATURE"
+    if remaining_servings == 6
+      suggestion = "Cake and Cookie"
+    elsif remaining_servings == 5
+        suggestion = "Cake"
+    else
+        suggestion = "Cookie"
+    end
+    return "Calculations complete: Make #{num_of_servings / library[item_to_make]} of #{item_to_make}, you have #{remaining_servings} leftover servings. Suggested baking items:  #{suggestion}."
+    #tells how many items can be made and suggesting other options for the remaining ingredients
   end
 end
-
-p serving_size_calc("pie", 7)
-p serving_size_calc("pie", 8)
-p serving_size_calc("cake", 5)
-p serving_size_calc("cake", 7)
-p serving_size_calc("cookie", 1)
-p serving_size_calc("cookie", 10)
-p serving_size_calc("THIS IS AN ERROR", 5)
-
-#  Reflection
