@@ -1,23 +1,34 @@
 #Attr Methods
 
-# I worked on this challenge [by myself, with:]
+# I worked on this challenge [by myself, ]
 
-# I spent [#] hours on this challenge.
+# I spent [3] hours on this challenge.
 
 # Pseudocode
 
-# Input:
-# Output:
-# Steps:
-
+# Input: A class that can access other class
+# Output: A class output using data from different class
+# Steps: Create a class that returns a name
+# Create another class that gets access to that name and returns a string including it
+Relase 5:
 class NameData
-
+  attr_accessor :name
+  def andrew
+    return "Andrew"
+  end
 end
-
 
 class Greetings
+  def initialize 
+    @name = NameData.new
+  end
 
+  def hello
+    puts "Hello #{@name.andrew}! How wonderful to see you today!"
+  end
 end
+name= Greetings.new
+name.hello
 
 
 
@@ -53,6 +64,29 @@ Is this code simpler than the last?
 Yes, it is shorter and refactored.  It has gotten rid of methods involving age
 
 Release 4:
+It is done on the actual file
+
+
+
+# Reflection:
+# What is a reader method?
+# It is a reader which means that it just return a value or state outside the class
+# But it does not change.
+
+# What is a writer method?
+# It is a writer which means that you can change the value of the variable outside te class
+# But it is not readable.
+
+# What do the attr methods do for you?
+# I'm not 100% sure but I think it acts like a instance variables that can be accessed outside the class
+
+# Should you always use an accessor to cover your bases? Why or why not?
+# No, because sometimes, you want your value to be not read or changed.
+# It will vary depending on the type of data
+
+# What is confusing to you about these methods?
+# I don't get why instance variable is sufficient enough.
+
 
 
 
