@@ -4,26 +4,26 @@
 
 # Your Code Here:
 
-class Profile
-# first let's finish refactoring this code
-# note that there is a way to add all of the variables like :age on one line, how would we do that?
-  attr_accessor :age, :name, :occupation
+# class Profile
+# # first let's finish refactoring this code
+# # note that there is a way to add all of the variables like :age on one line, how would we do that?
+#   attr_accessor :age, :name, :occupation
 
-  def initialize
-    @age = 27
-    @name = "Kim"
-    @occupation = "Cartographer"
-  end
+#   def initialize
+#     @age = 27
+#     @name = "Kim"
+#     @occupation = "Cartographer"
+#   end
 
-  def print_info
-    puts
-    puts "age: #{@age}"
-    puts
-    puts "name: #{@name}"
-    puts
-    puts "occupation: #{@occupation}"
-    puts
-  end
+#   def print_info
+#     puts
+#     puts "age: #{@age}"
+#     puts
+#     puts "name: #{@name}"
+#     puts
+#     puts "occupation: #{@occupation}"
+#     puts
+  # end
 
   # def what_is_name
   #   @name
@@ -40,22 +40,24 @@ class Profile
   # def change_my_occupation=(new_occupation)
   #   @occupation = new_occupation
   # end
-end
+# end
 
 class NameData
   attr_accessor :name
-  def initialize(name)
-    @name = name
+  def andrew
+    return "Andrew"
   end
 end
+
 class Greetings
   def initialize 
     @name = NameData.new
   end
 
   def hello
-    puts "Hello #{@name}! How wonderful to see you today!"
+    puts "Hello #{@name.andrew}! How wonderful to see you today!"
   end
-
 end
+name= Greetings.new
+name.hello
 
