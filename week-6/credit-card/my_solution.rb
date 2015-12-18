@@ -61,17 +61,10 @@ class CreditCard
   def check_card
     individual= @number.to_s.split("")
     individual.map! { |number|
-    individual.index(number)%2 == 0 ? number.to_i * 2 : number.to_i
-      }
-    individual.map! { |number|
-      number > 9 ? number.to_s.split("") : number = number
-      }
-    individual.flatten!
-    individual.map! { |number|
-      number = number.to_i
-      }
-    sum = individual.inject{|sum,x| sum + x }
-    sum %10 == 0
+    individual.index(number)%2 == 0 ? (number.to_i * 2).to_s.split("") : number.to_i
+  }
+    individual.flatten!.map! { |number| number = number.to_i }
+    individual.inject{|sum,x| sum + x } %10 == 0
   end
 end
 
