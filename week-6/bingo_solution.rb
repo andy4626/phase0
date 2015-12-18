@@ -30,9 +30,81 @@ class BingoBoard
     @bingo_board = board
   end
 
+  def call(string)
+    @letter = string[0].downcase
+    number= string[1..-1]
+    @number= number.to_i
+  
+    if @letter =="b" && @bingo_board[0..4][0].include?(@number)
+      return true
+    else
+      return false
+    end
 
+    if @letter =="i" && @bingo_board[0..4][1].include?(@number)
+      return true
+    else
+      return false
+    end
+    
+    if @letter =="n" && @bingo_board[0..4][2].include?(@number)
+      return true
+    else
+      return false
+    end
+    
+    if @letter =="g" && @bingo_board[0..4][3].include?(@number)
+      return true
+    else
+      return false
+    end
+    
+    if @letter =="o" && @bingo_board[0..4][4].include?(@number)
+      return true
+    else
+      return false
+    end
+  end
+
+  def check
+    if @letter == "b"
+      counter=0
+      while counter < 5
+        @bingo_board[i][0].gsub!("X") if @bingo_board[i][0]==@number
+      end
+      counter+=1
+    end
+  if @letter == "i"
+      counter=0
+      while counter < 5
+        @bingo_board[i][1].gsub!("X") if @bingo_board[i][1]==@number
+      end
+      counter+=1
+    end
+  if @letter == "n"
+      counter=0
+      while counter < 5
+        @bingo_board[i][2].gsub!("X") if @bingo_board[i][2]==@number
+      end
+      counter+=1
+    end
+  if @letter == "g"
+      counter=0
+      while counter < 5
+        @bingo_board[i][3].gsub!("X") if @bingo_board[i][3]==@number
+      end
+      counter+=1
+    end
+  if @letter == "o"
+      counter=0
+      while counter < 5
+        @bingo_board[i][4].gsub!("X") if @bingo_board[i][4]==@number
+      end
+      counter+=1
+    end
 end
 
+end
 # Refactored Solution
 
 
@@ -45,6 +117,8 @@ board = [[47, 44, 71, 8, 88],
         [75, 70, 54, 80, 83]]
 
 new_game = BingoBoard.new(board)
+p new_game.call("B22")
+
 
 
 #Reflection
