@@ -92,31 +92,42 @@ hangman.prototype.checkStatus = function(){
   console.log('Game is Over');
  }
 
-
-
-
 var newGame = new hangman();
 newGame.play();
 
 
-
-
-
-
-
-
-
 // Refactored Code
-
+// I could not refactor for this exercise.  My initial solution has been refactored as I was working on it
+// I just pulled a semi-all nighter for this exercise and got it done 2 hours before the deadline just to get it
+// working.  I will try to refactor in the future if I learn more new methods.
+// 
 
 
 
 
 
 // Reflection
-//
-//
-//
+// //What was the most difficult part of this challenge?
+// The most difficult part was figuring what a similar concept of instance variable or Ruby in Javascript
+// And creating functions that is going to return a value for anothe function to work.
+// The logic for check function was the most tough part.  Because without matchFound variable,
+// it only iterated through the first letter array, and stopped the for loop.  But by setting matchFound
+// variable, it iterates through the whole theWord array.
+// The function I spent the most time on was play function, I did not use while loop and I had no idea on how
+// to execute check function until the whole game is finished.  But after researching for hours,
+// I was able to get the syntax right.  Getting the correct syntax was the most stressful moment for this challenge.
+// // What did you learn about creating objects and functions that interact with one another?
+// As seen in hangman function, which was created like class from Ruby, the concept is solidified.
+
+// // Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
+// I learned a new method called prototype.  I learned to save some memory a bit.  The concept is, by setting
+// newGame variable equalling to new hangman, I only use instance variables set in the hangman function and
+// store it as newGame, and use the protype functions will be used on the instance variables set in newGame 
+// and execute the functions.
+
+// // How can you access and manipulate properties of objects?
+// I can use this. which is sort of like self. from Ruby or instance varibles.  I simply think of it as instance
+// variable, which I might be totally wrong. 
 //
 //
 //
