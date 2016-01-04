@@ -23,59 +23,84 @@
 
 // Initial Code
 //Let the word bank have several words in an array
-var wordBank= ['cash', 'dog', 'dish', 'money', 'raddish', 'carrot', 'factory', 'model', 'umbrella', 'persimmon',
-'hazelnut', 'industry', 'collapse', 'america', 'champion', 'storage', 'design', 'heater', 'paper', 'treadmill',
-'blanket', 'retail', 'marriage', 'engagement', 'apartment', 'weekend', 'rabbit', 'elephant', 'sweater',
-'neighborhood', 'neighbor', 'easter', 'naughty', 'crooked', 'laptop', 'dictionary', 'toothache', 'conditoiner',
-'program', 'project', 'olympics', 'manipulate', 'eloquent', 'variable', 'peacoat', 'coffee', 'penguin', 'tissue',
-'dresser', 'wardrobe']
-var life = 9
-var messages = {
-            win: 'You win!',
-            lose: 'Game over!',
-            guessed: ' already guessed, please try again...',
-        };
-        
-//Let the word bank have several words in an array
-var chosenWord= wordBank[Math.floor(Math.random() * wordBank.length)];
-var theWord = chosenWord.split("")
-console.log(theWord)
+var hangman= function() {
 
-//Display the number of letters of that letter
-console.log('There are ' +chosenWord.length.toString()+ ' letters. And you have '+ life.toString() + ' lives!')
-//Ask for the player's input letter
-// var letterGuess = prompt(messages.validLetter+ " You have " + life.toString() " tries.  Good luck.")
-// letterGuess = letterGuess.substring(0,1).toLowerCase()
+  this.wordBank= ['cash', 'dog', 'dish', 'money', 'raddish', 'carrot', 'factory', 'model', 'umbrella', 'persimmon',
+  'hazelnut', 'industry', 'collapse', 'america', 'champion', 'storage', 'design', 'heater', 'paper', 'treadmill',
+  'blanket', 'retail', 'marriage', 'engagement', 'apartment', 'weekend', 'rabbit', 'elephant', 'sweater',
+  'neighborhood', 'neighbor', 'easter', 'naughty', 'crooked', 'laptop', 'dictionary', 'toothache', 'conditoiner',
+  'program', 'project', 'olympics', 'manipulate', 'eloquent', 'variable', 'peacoat', 'coffee', 'penguin', 'tissue',
+  'dresser', 'wardrobe'];
+  
+  this.life = 9;
+  
+  this.chosenWord= this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
+  this.theWord = this.chosenWord.split("");
+  this.usedLetters = [];
 
-//If it matches any letter from the word bank, display where the letter is located
-function guess(letterGuess){
- if(theWord.includes(letterGuess)){
- 	display(letterGuess);
- 	}
- else {
- 	wrong(letterGuess);
- 	   }
+
+  this.resultBoard = [];
+  var board= this.resultBoard;
+  this.result= this.theWord.forEach(function(i) {
+    board.push('_');
+  });
+  
+};
+
+hangman.prototype.getLetter = function(){
+var letterGuess = prompt("Your Result: "+ this.resultBoard + " Give me a Letter. You have "+this.life +"chances left. "+ " Your used letters are: "+ this.usedLetters);
+  var userInputLetter = letterGuess[0].toLowerCase();
+  return userInputLetter;
 }
 
-function display(correctLetter){
-for(var i=0; i< chosenWord.length; i++){
-	if(correctLetter===theWord[i]){
-		prompt("That is correct! The letter " + correctLetter + " is on the "+ i.toString()+ "th position.")
-							}}}
-
-
-
-//If it is wrong, take a life away from the life toll
-function wrong(wrongLetter){
-		life-=1;
-		prompt("That is incorrect! You have "+life.toString()+" lives left. Last Letter: " + wrongLetter)
-		}
-
-
-//Game is finished if the player guesses the word before the life toll is gone or life toll is zero
-if(life=0){
-	console.log(messages.lose)
+hangman.prototype.check = function(inputLetter){
+  var matchFound = false;
+  for(var i=0; i< this.theWord.length; i++){
+    if(this.theWord[i]===inputLetter){
+        console.log(this);
+        this.resultBoard[i]= inputLetter;
+        matchFound = true;
+    }
+  }
+  if (matchFound === false) {
+    this.life -=1;
+    this.usedLetters.push(inputLetter);
+  }
 }
+
+hangman.prototype.checkStatus = function(){
+  if(this.life === 0 || !this.resultBoard.includes('_'))
+    {
+      return false;
+    }
+    else
+    {
+      return true;
+    }   
+ }
+ 
+ hangman.prototype.displayBoard = function(){
+   console.log('Result: ' + this.resultBoard+ 'The lives: '+ this.life);
+ }
+ 
+ hangman.prototype.play = function() {
+   while (this.checkStatus() === true) {
+     var letter = this.getLetter();
+     this.check(letter);
+     this.displayBoard();
+   }
+  console.log('Game is Over');
+ }
+
+
+
+
+var newGame = new hangman();
+newGame.play();
+
+
+
+
 
 
 
