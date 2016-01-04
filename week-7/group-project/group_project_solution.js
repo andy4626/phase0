@@ -1,3 +1,9 @@
+//User Stories:
+  //1. As a user I want a function called 'sum' that will provide the sum of a given set of numbers.
+  //2. As a user I want a function called 'mean' that will provide the average of a given set of numbers.
+  //3. As a user I want a function called 'median' that will provide the middle value of a given set of sorted numbers. If the given set of numbers contains an even amount of integers, I want the average of the two middle numbers.
+
+
 // User Story 1 Pseudocode:
 // Input: a given set of numbers (array?)
 // Output: sum of the given set of numbers
@@ -7,7 +13,7 @@
 // return the sum of the numbers
 
 
-// var sum = function(array){ 
+// var sum = function(array){
 // var result = 0;
 //   for(var i=0; i < array.length; i++);
 //  result += array[i];
@@ -25,8 +31,15 @@ function sum(numbersArray){
   return (sumNumbers);
 }
 
-sum([1,2,3,4]); 
+sum([1,2,3,4]);
 
+//Refactored Solution
+function sum(numbersArray){
+  return numbersArray.reduce(function(sum, x){
+    return sum + x;
+  });
+};
+//As a user, I want to know the total of all my numbers.
 
 // User Story 2 Pseudocode:
 // Input: a given set of numbers (array?)
@@ -48,8 +61,12 @@ function mean(numbersArray){
 
 mean([5, 5, 7, 7]);
 
+//refactored solution
+function mean(numbersArray){
+  return (sum(array)/(array.length));
+};
 
-
+//As a user, I want to know the average of a group of numbers.
 
 // User Story 3 Pseudocode:
 // Input: a given set of numbers (array?)
@@ -68,7 +85,7 @@ mean([5, 5, 7, 7]);
 function median(numbersArray){
 
   var sortedArray = numbersArray.sort(function(a, b){return a-b});
- 
+
 
     if (sortedArray.length % 2 != 0){
     var midIndex = sortedArray.length / 2;
@@ -81,6 +98,24 @@ function median(numbersArray){
     var midIndex = sortedArray.length / 2;
     return (sortedArray[midIndex] + sortedArray[midIndex-1]) /2;
   }
-    
+
 }
 
+//Refactored solution
+function median(array){
+  array.sort(function(a, b){return a-b});
+  var midIndex = array.length / 2;
+  if (array.length % 2 === 0){
+    return (array[midIndex] + array[(midIndex - 1)])/2;
+  } else {
+    return array[Math.floor(midIndex)];
+  }
+};
+
+//As a user I want to know the number that is exactly halfway in my dataset.
+
+//Test Summary:
+//All tests passed except for test 5 and 6 for the mean function in the refactored version, the initial solution passed these tests.
+//The logic was correct, but in our return statement we used a variable called 'array' which was never defined in the function.
+//We should have used the variable name 'numbersArray' because that was defined in the function.
+//This resulted in the following error: 'ReferenceError: array is not defined'
