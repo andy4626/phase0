@@ -72,8 +72,7 @@ gradebook.getAverage = function(name){
 
 
 var average = function(arr) {
-  var total = arr.reduce(function add(a, b) {return a + b});
-  return total / arr.length;
+ return arr.reduce((a, b) => a + b) / arr.length;
 };
 
 
