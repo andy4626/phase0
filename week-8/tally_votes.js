@@ -143,8 +143,17 @@ console.log(officers);
 
 // __________________________________________
 // Reflection
+// What did you learn about iterating over nested objects in JavaScript?
+// Javascript doesn't have methods like .each to iterate through nested objects
+// Therefore, I had to use for loops to iterate in the object and then use another for loop to iteratethrough
+// inside the objects.
 
+// Were you able to find useful methods to help you with this?
+// I was able to use for...in method, that looks for objects within another object with same object name
 
+// What concepts were solidified in the process of working through this challenge?
+// I solidified my knowledge on the term object.  It is much like hashes from Ruby
+// and I know how to iterate through them better for sure.
 
 
 
