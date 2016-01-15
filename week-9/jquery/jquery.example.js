@@ -26,7 +26,7 @@ bodyElement.css({'border': '10px dotted black'});
 bodyElement.css({'visibility': 'visible'});
 
 $( "div h1" )
-  .html( "<p>I am from the cohort <em>Squirrel</em></p>" )
+  .html( "<p>I am from the cohort <em>Squirrel</em></p>" );
 
 
 //RELEASE 4: Event Listener
@@ -38,9 +38,28 @@ $( "div h1" )
 
 //RELEASE 5: Experiment on your own
 
+$('img').before('<p>I was put in by jQuery</p>');
 
 
 
 
 
 })  // end of the document.ready function: do not remove or write DOM manipulation below this.
+
+
+// Reflection
+// What is jQuery?
+// jQuery is the most popular javascript library in use today.  It makes the website interact with the users
+
+// What does jQuery do for you?
+// jQuery allows us to drag elements, open and close sliding panel, animate HTML elements or add new elements.
+// It makes us add, change HTML elements, 	change CSS styles, react to existing events in the page and create new events.
+
+// What did you learn about the DOM while working on this challenge?
+// The DOM makes the users interact with users by declaring the objects of HTML, XTML, and XTL documents.
+
+
+
+
+
+
