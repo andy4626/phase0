@@ -200,4 +200,14 @@ my_car.deliver_pizzas
 
 
 # 5. Reflection
+# What concepts did you review in this challenge?
+# I solidified my knowledge on class and instance variables.  
+
+# What is still confusing to you about Ruby?
+# My pair put .description methods in Car class.  .description method was created from Pizza class and 
+# I had no idea i can implement the methods created in other class can be used in other classes.
+
+# What are you going to study to get more prepared for Phase 1?
+# I am going to study more on classes.  The terminologies need to be studied more.
+
 
